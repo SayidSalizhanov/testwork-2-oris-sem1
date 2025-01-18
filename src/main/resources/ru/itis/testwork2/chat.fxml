@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="720.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.itis.testwork2.controller.ChatController">
+   <children>
+      <TextField fx:id="commandTextField" layoutX="6.0" layoutY="652.0" prefHeight="60.0" prefWidth="963.0" promptText="Введите команду...">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="answerTextArea" layoutX="6.0" layoutY="50.0" prefHeight="500.0" prefWidth="1140.0" promptText="Ответ...">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="answerButton" layoutX="980.0" layoutY="655.0" mnemonicParsing="false" onAction="#getAnswer" text="Get Answer">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
