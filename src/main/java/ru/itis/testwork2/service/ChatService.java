@@ -60,14 +60,16 @@ public class ChatService {
     }
 
     public String getExchangeRate(String rate) {
-        String response = httpClient.get(exchangeUrlFormat.formatted(exchangeApiKey, rate), Map.of(), Map.of());
-
-        JSONObject jsonObject = new JSONObject(response);
 
         String answer;
+
         try {
+            String response = httpClient.get(exchangeUrlFormat.formatted(exchangeApiKey, rate), Map.of(), Map.of());
+
+            JSONObject jsonObject = new JSONObject(response);
+
             answer = "Курс %s к рублю: %s".formatted(rate, String.valueOf(jsonObject.getJSONObject("conversion_rates").get("RUB")));
-        } catch (JSONException e) {
+        } catch (Exception e) {
             answer = "Такой валюты не существует";
         }
 

@@ -46,14 +46,14 @@ public class ChatController implements Initializable {
                 try {
                     answerTextArea.setText(chatService.getWeather(words[1]));
                 } catch (ArrayIndexOutOfBoundsException e) {
-                    answerTextArea.setText(chatService.getWeather("Казань"));
+                    answerTextArea.setText("Введите город");
                 }
                 break;
             case "exchange":
                 try {
                     answerTextArea.setText(chatService.getExchangeRate(words[1]));
                 } catch (ArrayIndexOutOfBoundsException e) {
-                    answerTextArea.setText(chatService.getExchangeRate("USD"));
+                    answerTextArea.setText("Введите валюту");
                 }
                 break;
             case "quit":
